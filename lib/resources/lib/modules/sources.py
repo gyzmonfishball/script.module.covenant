@@ -675,6 +675,8 @@ class sources:
         except:
             pass
 
+        sources = []
+
         try:
             url = None
             dbcur.execute("SELECT * FROM rel_url WHERE source = '%s' AND imdb_id = '%s' AND season = '%s' AND episode = '%s'" % (source, imdb, '', ''))
