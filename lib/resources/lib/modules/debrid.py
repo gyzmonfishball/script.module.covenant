@@ -20,7 +20,7 @@
 from resources.lib.modules import log_utils
 
 try:
-    import urlresolver
+    import resolveurl as urlresolver
 
     debrid_resolvers = [resolver() for resolver in urlresolver.relevant_resolvers(order_matters=True) if resolver.isUniversal()]
 

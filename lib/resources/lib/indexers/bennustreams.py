@@ -1363,7 +1363,7 @@ class resolver:
             pass
 
         try:
-            import urlresolver
+            import resolveurl as urlresolver
 
             hmf = urlresolver.HostedMediaFile(url=url)
 

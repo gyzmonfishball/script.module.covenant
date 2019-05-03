@@ -35,7 +35,7 @@ from resources.lib.modules import thexem
 try: from sqlite3 import dbapi2 as database
 except: from pysqlite2 import dbapi2 as database
 
-try: import urlresolver
+try: import resolveurl as urlresolver
 except: pass
 
 try: import xbmc
