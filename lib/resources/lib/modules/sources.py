@@ -676,19 +676,6 @@ class sources:
             pass
 
         try:
-            sources = []
-            dbcur.execute("SELECT * FROM rel_src WHERE source = '%s' AND imdb_id = '%s' AND season = '%s' AND episode = '%s'" % (source, imdb, season, episode))
-            match = dbcur.fetchone()
-            t1 = int(re.sub('[^0-9]', '', str(match[5])))
-            t2 = int(datetime.datetime.now().strftime("%Y%m%d%H%M"))
-            update = abs(t2 - t1) > 60
-            if update == False:
-                sources = eval(match[4].encode('utf-8'))
-                return self.sources.extend(sources)
-        except:
-            pass
-
-        try:
             url = None
             dbcur.execute("SELECT * FROM rel_url WHERE source = '%s' AND imdb_id = '%s' AND season = '%s' AND episode = '%s'" % (source, imdb, '', ''))
             url = dbcur.fetchone()
