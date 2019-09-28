@@ -32,6 +32,8 @@ from resources.lib.modules import source_utils
 from resources.lib.modules import log_utils
 from resources.lib.modules import thexem
 
+import openscrapers
+
 try: from sqlite3 import dbapi2 as database
 except: from pysqlite2 import dbapi2 as database
 
@@ -1144,7 +1146,9 @@ class sources:
 
         self.metaProperty = 'plugin.video.covenant.container.meta'
 
-        from resources.lib.sources import sources
+        #from resources.lib.sources import sources
+
+        from openscrapers import sources
 
         self.sourceDict = sources()
 
