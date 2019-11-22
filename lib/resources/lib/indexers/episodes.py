@@ -124,7 +124,7 @@ class seasons:
             data = urllib2.urlopen(url, timeout=30).read()
 
             zip = zipfile.ZipFile(StringIO.StringIO(data))
-            result = zip.read('%s.xml' % 'en')
+            result = zip.read('%s.zip.xml' % 'en')
             artwork = zip.read('banners.xml')
             zip.close()
 
